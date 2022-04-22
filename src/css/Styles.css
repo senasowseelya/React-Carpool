@@ -1,0 +1,90 @@
+.sign-up
+{
+    color:white;
+    text-underline-offset: 6px;
+}
+body{
+    margin:0
+}
+.container
+{
+    margin:0;
+    max-width:1900px;
+    
+}
+.bg-img
+{
+    height:100%;
+}
+
+hr:not([size]) {
+    height: 3px;
+    color:white;
+    text-align:center;
+    width:50px;
+    margin: 0 auto;
+     
+}
+hr{
+    color:white;
+    background-color: white;
+}
+
+.input-field
+{
+    height:50px;
+    width:320px;
+    border-radius:4px;
+    border:none;
+    padding:0px 0px 0px 25px;
+    
+}
+
+
+.col-md-4
+{
+    
+    background-color: orange;
+    height:720px;
+}
+.parent {
+    text-align: center;
+    color:white;
+  }
+  .child {
+    display: inline-block;
+    color:white;
+    }
+.rounded-pill
+{
+    background-color: blueviolet;
+    width:30%;
+    color:white;
+    border:none;
+}
+a{
+    cursor: pointer;
+    color:white;
+    text-decoration:none;
+
+}
+.label-password
+{
+    color:Grey;
+}
+.Log
+{
+    text-underline-offset: 5px;
+}
+
+
+input:focus::-webkit-input-placeholder 
+{
+
+    opacity:1;
+    transform: scale(0.75) translateY(-80%) translateX(-50px);
+}
+
+
+
+
