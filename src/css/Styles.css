@@ -47,6 +47,10 @@ hr{
     background-color: orange;
     height:720px;
 }
+#log-in
+{
+    background-color:blueviolet;
+}
 .parent {
     text-align: center;
     color:white;
@@ -61,7 +65,14 @@ hr{
     width:30%;
     color:white;
     border:none;
+    height: 40px;
 }
+#log-in-submit
+{
+    background-color: orange;
+    height: 40px;
+}
+
 a{
     cursor: pointer;
     color:white;

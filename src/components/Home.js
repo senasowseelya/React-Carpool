@@ -15,7 +15,7 @@ class  Home extends Component {
                         <br></br>
                         <br></br>
                         <br></br>
-                        <h3 className='sign-up'>Sign Up</h3>
+                        <h2 className='sign-up'><b>Sign Up</b></h2>
                         <hr></hr> 
                         <br></br>
                         <div className="form">
