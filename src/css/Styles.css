@@ -11,6 +11,8 @@ body{
     margin:0;
     max-width:1900px;
     
+
+
 }
 .bg-img
 {
@@ -29,18 +31,15 @@ hr{
     color:white;
     background-color: white;
 }
-
 .input-field
 {
-    height:50px;
+    height:55px;
     width:320px;
     border-radius:4px;
     border:none;
     padding:0px 0px 0px 25px;
     
 }
-
-
 .col-md-4
 {
     
@@ -55,10 +54,10 @@ hr{
     text-align: center;
     color:white;
   }
-  .child {
+.child {
     display: inline-block;
     color:white;
-    }
+ }
 .rounded-pill
 {
     background-color: blueviolet;
@@ -79,22 +78,52 @@ a{
     text-decoration:none;
 
 }
-.label-password
-{
-    color:Grey;
-}
+
 .Log
 {
     text-underline-offset: 5px;
 }
 
-
-input:focus::-webkit-input-placeholder 
-{
-
-    opacity:1;
-    transform: scale(0.75) translateY(-80%) translateX(-50px);
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top:2px;
+  bottom: 10px;
+  left: 100px;
+  font-size:12px;
+  opacity: 1;
 }
+
+.input-container
+{
+    position:relative;
+}
+.inputText {
+  font-size:16px;
+  width: 300px;
+  height: 55px;
+  padding:15px 0px 0px 7px;
+  border-radius: 4px;
+  border:none;
+}
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 120px;
+  top: 17.5px;
+  transition: 0.2s ease all;
+}
+.Error
+{
+    color:white;
+    font-size: 17px;
+}
+.success-message
+{
+    font-size:20px;
+    color:Green;
+}
+
+
 
 
 
