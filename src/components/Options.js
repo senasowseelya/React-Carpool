@@ -5,7 +5,7 @@ class Options extends Component {
     render() {
         return (
             <div>
-                <img src={bg}></img>
+                <img src={bg} alt='image'></img>
                 
             </div>
         );

@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import bg from '../images/img1.png'
 import '../css/Styles.css'
- import {Link} from 'react-router-dom'
- import data from './Constants'
+import {Link} from 'react-router-dom'
+
+ 
 
 class Login extends Component {
-    constructor()
+    constructor(props)
     {
-        super();
+        super(props);
         this.state=
         {
             message:''
         }
+        
        
     }
     HandleChange=(event)=>
@@ -27,14 +29,17 @@ class Login extends Component {
     HandleSubmit=(event)=>
     {
         
+        
         let flag=0;
         event.preventDefault();
-        Object.entries(window.Data).map(([key, value]) =>{
-            if((value.email==this.state.email)&&(value.password==this.state.password))
+        Object.entries(this.props.Data).map(([key,value]) =>{
+            
+            if((value.email===this.state.email)&&(value.password===this.state.password))
             {
                 flag=1
             }
         })
+        
         if(flag==1)
         {
             this.setState(
@@ -43,6 +48,16 @@ class Login extends Component {
                 }
 
             )
+        }
+        else
+        {
+            this.setState(
+                {
+                message:'Invalid Credentials'
+                }
+
+            )
+
         }
         event.preventDefault();
     }

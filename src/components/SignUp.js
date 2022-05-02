@@ -2,22 +2,15 @@ import React, { Component } from 'react';
 import bg from '../images/img1.png'
 import '../css/Styles.css'
 import {Link} from 'react-router-dom'
-import data from './Constants'
 
-window.Data=[
-    {
-        email:'sena@gmail.com',
-        password:'Sena@123'
-    },
-    {
-        email:'mohith@gmail.com',
-        password:'mohith@123'
-    }
-]
+
+
+
 class SignUp extends Component {
-    constructor()
+    constructor(props)
     {
-        super();
+        super(props);
+        
         this.state=
         {
             email:'',
@@ -43,7 +36,7 @@ class SignUp extends Component {
     }
     HandleSubmit=(event)=>
     {
-        if(this.state.formErrors.email=='' &&this.state.formErrors.password==''&& this.state.formErrors.confirmPassword==''){
+        if(this.state.formErrors.email==='' &&this.state.formErrors.password===''&& this.state.formErrors.confirmPassword===''){
         this.setState(
             {
             message:'Successfully Signed Up .You can Login Now :)'
@@ -51,8 +44,7 @@ class SignUp extends Component {
         );
         }
         event.preventDefault();
-        window.Data.push({'email':this.state.email,'password':this.state.password})
-        console.log(window.Data);
+        this.props.Data.push({'email':this.state.email,'password':this.state.password})
         event.preventDefault();
         
     }
@@ -65,7 +57,7 @@ class SignUp extends Component {
             switch(fieldName)
             {
                 case 'email':
-                    if(this.state.email=='')
+                    if(this.state.email==='')
                     fieldValidationErrors.email='Email should not be empty!!';
                     else{
                     emailValid=value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
@@ -73,7 +65,7 @@ class SignUp extends Component {
                     }
                     break;
                 case 'password':
-                    if(this.state.password=='')
+                    if(this.state.password==='')
                     fieldValidationErrors.password='Password should not be empty!!'
                     else{
                     passwordValid = value.length >= 6;
@@ -81,12 +73,13 @@ class SignUp extends Component {
                     }
                     break;
                 case 'confirmPassword':
-                    if(this.state.confirmPassword=='')
+                    if(this.state.confirmPassword==='')
                     fieldValidationErrors.confirmPassword='Confirm Password should not be empty!!'
                     else{
                     confirmPassword = (this.state.confirmPassword===this.state.password);
                     fieldValidationErrors.confirmPassword = confirmPassword ? '': 'Confirm Password not matched!!';
                     }
+                    break;
                 default:
                     break;
             }
@@ -105,7 +98,7 @@ class SignUp extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-8"> 
-                        <img   className="bg-img" src={bg}></img>
+                        <img   className="bg-img" src={bg} alt='img'></img>
                     </div>
                     <div className="col-md-4"> 
                         <br></br>
